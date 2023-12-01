@@ -1,23 +1,12 @@
-
-:root {
-    --body-background: #f3f5fa;
-    --primary-color: #97d28b;
-    --primary-dark-color: #173d33;
-    --primary-light-color: #dcefd8;
-    --text-color: #173d33;
-    --bg-section-color: #eaedf1;
-    --white-text: #fff;
-    --main-header-size-mob: 36px;
-    --secondary-header-size-mob: 28px;
-}
+@import "/app/colours.scss";
 
 body {
-    background-color: var(--body-background);
+    background-color: $background;
     font-family: "Fira Sans", sans-serif;
     font-weight: 400;
     font-style: normal;
     line-height: normal;
-    color: var(--text-color);
+    color: $text-color;
     margin: 0;
     padding: 0;
 }

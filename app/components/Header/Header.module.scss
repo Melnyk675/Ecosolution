@@ -1,0 +1,73 @@
+@import "/app/colours.scss";
+
+.header {
+    width: 100%;
+    padding: 36px 0;
+    position: fixed;
+    background-color: $background;
+    z-index: 5;
+  }
+  
+  .scrolled {
+    background-color: $white-text;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+  
+    &:hover {
+      .logo_title {
+        color: $green;
+      }
+    }
+  }
+  
+  .logo_title {
+    font-family: var(--font-gothic);
+    font-size: 33px;
+    font-weight: 500;
+    letter-spacing: -1.32px;
+    line-height: normal;
+    transition: color 300ms linear;
+  }
+  
+  .logo_text {
+    font-family: var(--font-saygon);
+    font-size: 10px;
+    line-height: 0.9;
+    letter-spacing: -0.4px;
+    width: 60px;
+    margin-top: 5px;
+  }
+  
+  .logo_span {
+    font-family: var(--font-saygon);
+    font-size: 10px;
+    line-height: 0.9;
+    letter-spacing: -0.4px;
+    color: $green;
+  }
+  
+  .menu_btn {
+    width: 40px;
+    height: 39px;
+    padding: 11.5px 12px;
+    border: none;
+    outline: none;
+    border-radius: 500px;
+    background-color: $light-green;
+    cursor: pointer;
+    transition: background-color 300ms linear;
+  
+    &:hover {
+      background-color: $green;
+    }
+  }
