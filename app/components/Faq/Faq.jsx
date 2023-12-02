@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Container } from "../Container/Wrapper/Wrapper";
+import { Wrapper } from "../Container/Wrapper/Wrapper";
 import { Title } from "../Container/Title/Title";
 import Minus from "@/public/icons/minus.svg";
 import Plus from "@/public/icons/plus.svg";
@@ -21,7 +21,7 @@ export const Faq = () => {
 
   return (
     <section id="faq">
-      <Container>
+      <Wrapper>
         <Title>Frequently Asked Questions</Title>
         <ul className={css.list}>
           {faq.map((question, index) => (
@@ -47,7 +47,7 @@ export const Faq = () => {
         <a href="#contacts" className={css.contact_btn}>
           Contact Us
         </a>
-      </Container>
+      </Wrapper>
     </section>
   );
 };

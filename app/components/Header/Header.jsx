@@ -1,13 +1,14 @@
  "use client"; 
 
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Wrapper } from "../Container/Wrapper/Wrapper";
-import Logo from "@/public/icons/logo.svg";
+import LogoIcon from "@/public/icons/logo.svg";
 import Menu from "@/public/icons/menu.svg";
 import css from "./Header.module.scss";
+import { MenuMob } from "./MenuMob/MenuMob";
 
 export const Header = () => {
-    const [setIsMenuOpen] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [scroll, setScroll] = useState(false);
   
     useEffect(() => {
@@ -37,7 +38,7 @@ export const Header = () => {
         <header className={`${css.header} ${scroll && css.scrolled}`}>
           <Wrapper className={css.wrapper}>
             <a href="/" className={css.logo}>
-              <Logo width={31} height={18} />
+              <LogoIcon width={31} height={18} />
               <p className={css.logo_title}>ecosolution</p>
               <p className={css.logo_text}>
                 <span className={css.logo_span}>GREEN</span>ERGY FOR LIFE
@@ -52,6 +53,7 @@ export const Header = () => {
             </button>
           </Wrapper>
         </header>
+        {isMenuOpen && <MenuMob setIsMenuOpen={setIsMenuOpen} />}
       </>
     );
   };
