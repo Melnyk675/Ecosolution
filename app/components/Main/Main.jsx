@@ -6,7 +6,7 @@ import css from "./Main.module.scss";
 
 export const MainSection = () => {
   return (
-    <section className={css.section} id="main">
+    <section className={css.section} id="Main">
       <Wrapper>
       <div className={css.wrap}>
           <Title isMainTitle className={css.title}>
@@ -32,7 +32,7 @@ export const MainSection = () => {
         </div>
         <div className={css.img_wrap}>
           <Image
-            src="/images/about2x.jpg"
+            src="/images/turbine1.jpg"
             width={320}
             height={200}
             alt="windmill"

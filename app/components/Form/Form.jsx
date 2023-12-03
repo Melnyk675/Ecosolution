@@ -17,7 +17,7 @@ export const ContactForm = () => (
       console.log(values);
     }}
   >
-    {({ errors, touched }) => (
+    {({ errors }) => (
       <Form className={css.form}>
         <div className={css.wrap}>
           <label htmlFor="name" className={css.label}>

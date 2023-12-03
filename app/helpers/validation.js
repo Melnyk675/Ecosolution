@@ -1,21 +1,21 @@
-import { object, string } from 'joi';
+import Joi from 'joi';
 
-const validationSchema = object({
-  name: string()
+const validationSchema = Joi.object({
+  name: Joi.string()
     .pattern(/^[^\d]+$/, { name: "alpha", invert: true })
     .required()
     .messages({
       "string.pattern.base": "Wrong Fullname",
       "any.required": "Required",
     }),
-  email: string()
+  email: Joi.string()
     .email({ tlds: { allow: false } })
     .required()
     .messages({
       "string.email": "Wrong Email",
       "any.required": "Required",
     }),
-  phone: string()
+  phone: Joi.string()
     .pattern(/^\d+$/)
     .min(10)
     .max(12)
@@ -26,7 +26,8 @@ const validationSchema = object({
       "string.max": "Wrong Phone",
       "any.required": "Required",
     }),
-  message: string(),
+  message: Joi.string(),
 });
 
 export default validationSchema;
+

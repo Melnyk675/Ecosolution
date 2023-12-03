@@ -9,7 +9,7 @@ export const Values = () => {
   return (
     <ul className={css.value_list}>
       <li className={css.value_card}>
-        <div className={css.wrap}>
+        <div className={css.value_wrap}>
           <Circle width={16} height={16} className={css.icon} />
           <h3 className={css.value_title}>Openness</h3>
         </div>

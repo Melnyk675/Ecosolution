@@ -1,7 +1,7 @@
 @import "/app/colours.scss";
 
 .footer {
-  padding: 24px 0;
+  padding: 24px;
 
   @media (min-width: 768px) {
     padding-bottom: 40px;
@@ -28,6 +28,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  @media (min-width: 1280px) {
+    width: 458px;
   }
 }
 
@@ -76,8 +80,34 @@
   }
 }
 
-.icon {
+.icon_fb {
   stroke: $dark-green;
+  transition: 300ms linear;
+
+  path:first-child {
+    fill: $dark-green;
+    transition: 300ms linear;
+  }
+
+  &:hover,
+  &:focus {
+    stroke: $green;
+  }
+
+  &:hover path:first-child,
+  &:focus path:first-child {
+    fill: $green;
+  }
+}
+
+.icon_inst {
+  stroke: $dark-green;
+  transition: 300ms linear;
+
+  &:hover,
+  &:focus {
+    stroke: $green;
+  }
 }
 
 .address {

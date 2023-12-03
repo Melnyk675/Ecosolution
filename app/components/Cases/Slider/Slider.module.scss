@@ -31,17 +31,17 @@
   font-weight: 300;
   line-height: normal;
   letter-spacing: -1.12px;
-
-  @media (min-width: 1280px) {
-    width: 192px;
-  }
 }
 
 .btn_wrap {
   width: 144px;
   display: flex;
   justify-content: space-between;
-  padding-bottom: 8px;
+  padding-bottom: 6px;
+
+  @media (min-width: 1280px) {
+    width: 192px;
+  }
 }
 
 .button {

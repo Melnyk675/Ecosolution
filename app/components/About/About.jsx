@@ -6,7 +6,7 @@ import css from "./About.module.scss";
 
 export const About = () => {
   return (
-    <section className={css.section}>
+    <section className={css.section} id="About">
       <Wrapper>
       <div className={css.wrap}>
           <Title className={css.title}>Main values of our company</Title>

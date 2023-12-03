@@ -5,11 +5,11 @@ import { useMedia } from "react-use";
 import { Wrapper } from "../Container/Wrapper/Wrapper";
 import { Logo } from "../Container/Logo/Logo";
 import Menu from "@/public/icons/menu.svg";
-import css from "./Header.module.scss";
 import { MenuMob } from "./MenuMob/MenuMob";
 import { Btn } from "../Container/Button/Button";
 import { scrollToTop, toggleScroll, onWindowScroll, onHeaderChange,
 } from "@/app/helpers/scroll";
+import css from "./Header.module.scss";
 
 export const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);

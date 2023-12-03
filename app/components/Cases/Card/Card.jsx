@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ArrowRight from "@/public/icons/arrow-right.svg";
+import ArrowUpRight from "@/public/icons/arrow-upright.svg";
 import css from "./Card.module.scss";
 
 export const CaseCard = ({ onecase }) => {
@@ -23,7 +23,7 @@ export const CaseCard = ({ onecase }) => {
             <h3 className={css.desk_title}>{onecase.name}</h3>
           </div>
           <button type="button" className={css.button}>
-            <ArrowRight width={28} height={28} className={css.icon} />
+            <ArrowUpRight width={28} height={28} className={css.icon} />
           </button>
         </div>
         <div className={css.text_wrap}>

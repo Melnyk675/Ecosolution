@@ -56,6 +56,10 @@
     letter-spacing: -0.6px;
     margin-bottom: 24px;
 
+    @media (min-width: 768px) {
+      letter-spacing: -0.64px;
+    }
+
     @media (min-width: 1280px) {
       width: 362px;
     }
