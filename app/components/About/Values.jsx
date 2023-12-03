@@ -2,14 +2,15 @@ import Circle from "@/public/icons/circle.svg";
 import Global from "@/public/icons/global.svg";
 import Charge from "@/public/icons/charge.svg";
 import Rank from "@/public/icons/ranking.svg";
-import css from "./About.module.scss";
+import css from "./Values.module.scss";
+import Image from "next/image";
 
 export const Values = () => {
   return (
     <ul className={css.value_list}>
       <li className={css.value_card}>
         <div className={css.wrap}>
-          <Circle width={16} height={16} />
+          <Circle width={16} height={16} className={css.icon} />
           <h3 className={css.value_title}>Openness</h3>
         </div>
         <p className={css.value_text}>
@@ -17,8 +18,8 @@ export const Values = () => {
         </p>
       </li>
       <li className={css.value_card}>
-        <div className={css.wrap}>
-          <Global width={16} height={16} />
+      <div className={css.value_wrap}>
+          <Global width={16} height={16} className={css.icon} />
           <h3 className={css.value_title}>Responsibility</h3>
         </div>
         <p className={css.value_text}>
@@ -26,9 +27,31 @@ export const Values = () => {
           and the lives of future generations
         </p>
       </li>
+      <li className={css.img_wrap1}>
+        <Image
+          src="/images/workers1.jpg"
+          width={320}
+          height={200}
+          alt="windmill"
+          sizes="(max-width: 768px) 100%, 320px"
+          loading="lazy"
+          style={{ objectFit: "cover", width: "100%", height: "100%" }}
+        />
+      </li>
+      <li className={css.img_wrap2}>
+        <Image
+          src="/images/solar1.jpg"
+          width={342}
+          height={197}
+          alt="windmill"
+          sizes="(max-width: 768px) 100%, 342px"
+          loading="lazy"
+          style={{ objectFit: "cover", width: "100%", height: "100%" }}
+        />
+      </li>
       <li className={css.value_card}>
-        <div className={css.wrap}>
-          <Charge width={16} height={16} />
+        <div className={css.value_wrap}>
+          <Charge width={16} height={16} className={css.icon}/>
           <h3 className={css.value_title}>Innovation</h3>
         </div>
         <p className={css.value_text}>
@@ -36,8 +59,8 @@ export const Values = () => {
         </p>
       </li>
       <li className={css.value_card}>
-        <div className={css.wrap}>
-          <Rank width={16} height={16} />
+        <div className={css.value_wrap}>
+          <Rank width={16} height={16} className={css.icon}/>
           <h3 className={css.value_title}>Quality</h3>
         </div>
         <p className={css.value_text}>

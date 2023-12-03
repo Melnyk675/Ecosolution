@@ -3,9 +3,10 @@
 import { useState } from "react";
 import { Wrapper } from "../Container/Wrapper/Wrapper";
 import { Title } from "../Container/Title/Title";
+import { Btn } from "../Container/Button/Button";
 import Minus from "@/public/icons/minus.svg";
 import Plus from "@/public/icons/plus.svg";
-import faq from "./faq.json";
+import faq from "@/app/components/Faq/faq.json";
 import css from "./Faq.module.scss";
 
 export const Faq = () => {
@@ -20,17 +21,17 @@ export const Faq = () => {
   };
 
   return (
-    <section id="faq">
-      <Wrapper>
-        <Title>Frequently Asked Questions</Title>
+    <section id="faq" className={css.section}>
+      <Wrapper className={css.container}>
+        <Title className={css.mob_title}>Frequently Asked Questions</Title>
         <ul className={css.list}>
           {faq.map((question, index) => (
             <li className={css.card} key={question.id}>
               <div className={css.wrap} onClick={() => toggleAnswer(index)}>
                 {activeIndex === index ? (
-                  <Minus width={40} height={16} />
+                  <Minus width={28} height={28} />
                 ) : (
-                  <Plus width={40} height={16} />
+                  <Plus width={28} height={28} />
                 )}
 
                 <h3 className={css.title}>{question.title}</h3>
@@ -41,12 +42,15 @@ export const Faq = () => {
             </li>
           ))}
         </ul>
+        <div className={css.title_wrap}>
+          <Title className={css.desk_title}>Frequently Asked Questions</Title>
+          <div>
         <p className={css.contact_text}>
           Didn`t find the answer to your question?
         </p>
-        <a href="#contacts" className={css.contact_btn}>
-          Contact Us
-        </a>
+        <Btn className={css.contact_btn}>Contact Us</Btn>
+        </div>
+        </div>
       </Wrapper>
     </section>
   );

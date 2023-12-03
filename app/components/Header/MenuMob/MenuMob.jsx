@@ -1,10 +1,20 @@
 import Close from "@/public/icons/close.svg";
-import Arrow from "@/public/icons/arrow-right.svg";
+import ArrowUpright from "@/public/icons/arrow-upright.svg";
 import MobInstagram from "@/public/icons/mob-instagram.svg";
 import MobFacebook from "@/public/icons/mob-facebook.svg";
+import { scrollToSection } from "@/app/helpers/scroll";
 import css from "./MenuMob.module.scss";
 
 export const MenuMob = ({ setIsMenuOpen }) => {
+  const menuItem = ["Main", "About", "Cases", "FAQ", "Contact"];
+  const menu = localStorage.getItem("menu");
+
+  const handleMenuClick = (item) => {
+    setIsMenuOpen(false);
+    scrollToSection(`#${item}`);
+    localStorage.setItem("menu", item);
+  };
+
   return (
     <div className={css.backdrop}>
       <div className={css.menu}>
@@ -18,38 +28,33 @@ export const MenuMob = ({ setIsMenuOpen }) => {
         </button>
         <nav className={css.nav}>
           <ul>
-            <li className={css.menu_item} onClick={() => setIsMenuOpen(false)}>
-              <p className={css.item_text}>Main</p>
-              <Arrow width={16} height={16} className={css.item_icon} />
-            </li>
-            <li className={css.menu_item} onClick={() => setIsMenuOpen(false)}>
-              <p className={css.item_text}>About</p>
-              <Arrow width={16} height={16} className={css.item_icon} />
-            </li>
-            <li className={css.menu_item} onClick={() => setIsMenuOpen(false)}>
-              <p className={css.item_text}>Cases</p>
-              <Arrow width={16} height={16} className={css.item_icon} />
-            </li>
-            <li className={css.menu_item} onClick={() => setIsMenuOpen(false)}>
-              <p className={css.item_text}>FAQ</p>
-              <Arrow width={16} height={16} className={css.item_icon} />
-            </li>
-            <li className={css.menu_item} onClick={() => setIsMenuOpen(false)}>
-              <p className={css.item_text}>Contact Us</p>
-              <Arrow width={16} height={16} className={css.item_icon} />
-            </li>
+          {menuItem.map((item) => (
+            <li key={item} className={css.menu_item}
+            onClick={() => handleMenuClick(item)}
+          >
+            <p className={css.item_text}
+              style={{ color: item === menu && "#97d28b" }}
+            >
+              {item === "Contact" ? "Contact Us" : item}
+            </p>
+            <ArrowUpright
+              width={16}
+              height={16}
+              className={css.item_icon}
+              style={{ stroke: item === menu && "#97d28b" }}
+            />
+          </li>
+        ))}
           </ul>
         </nav>
         <div className={css.icons_wrap}>
-          <a
-            href="https://www.facebook.com/"
+          <a href="https://www.facebook.com/"
             target="_blank"
             className={css.link}
           >
             <MobFacebook width={24} height={24} className={css.icon} />
           </a>
-          <a
-            href="https://www.instagram.com/"
+          <a href="https://www.instagram.com/"
             target="_blank"
             className={css.link}
           >

@@ -2,15 +2,51 @@
 
 .section {
     padding-top: 110px;
+
+    @media (min-width: 768px) {
+      padding-top: 128px;
+    }
+  
+    @media (min-width: 1280px) {
+      padding-top: 200px;
+    }
   }
   
   .wrap {
     padding-bottom: 24px;
     border-bottom: 1px solid $green;
+
+    @media (min-width: 768px) {
+      display: flex;
+      justify-content: space-between;
+    }
   }
   
   .title {
     font-size: 36px;
+
+    @media (min-width: 768px) {
+      width: 300px;
+      font-size: 48px;
+    }
+  
+    @media (min-width: 1280px) {
+      width: 484px;
+      font-size: 64px;
+    }
+  }
+
+  .content_wrap {
+    @media (min-width: 768px) {
+      width: 342px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  
+    @media (min-width: 1280px) {
+      width: 459px;
+    }
   }
   
   .text {
@@ -19,6 +55,10 @@
     line-height: normal;
     letter-spacing: -0.6px;
     margin-bottom: 24px;
+
+    @media (min-width: 1280px) {
+      width: 362px;
+    }
   }
   
   .button {
@@ -42,6 +82,10 @@
       border: 1px solid $dark-green;
       color: $green;
     }
+
+    @media (min-width: 768px) {
+      margin: 0;
+    }
   }
   
   .icon_wrap {
@@ -54,4 +98,68 @@
   
   .icon {
     stroke: $dark-green;
+  }
+
+  .contact_wrap {
+    margin: 24px 0 36px;
+  
+    @media (min-width: 768px) {
+      display: flex;
+      justify-content: space-between;
+      margin: 16px 0 36px;
+    }
+  }
+  
+  .adress {
+    font-size: 16px;
+    letter-spacing: -0.64px;
+    text-align: center;
+    margin-bottom: 8px;
+  
+    @media (min-width: 768px) {
+      margin-bottom: 0px;
+    }
+  }
+  
+  .contact_wrap_add {
+    @media (min-width: 768px) {
+      width: 342px;
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    @media (min-width: 1280px) {
+      width: 458px;
+    }
+  }
+  
+  .email {
+    font-size: 16px;
+    letter-spacing: -0.64px;
+    text-align: center;
+  }
+  
+  .rights {
+    display: none;
+  
+    @media (min-width: 768px) {
+      display: inline;
+      font-size: 16px;
+      letter-spacing: -0.64px;
+      text-align: center;
+    }
+  }
+  
+  .img_wrap {
+    min-width: 320px;
+    height: 200px;
+    width: 100%;
+  
+    @media (min-width: 768px) {
+      height: 348px;
+    }
+  
+    @media (min-width: 1280px) {
+      height: 524px;
+    }
   }

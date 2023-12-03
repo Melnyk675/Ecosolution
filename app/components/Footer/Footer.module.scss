@@ -1,0 +1,112 @@
+@import "/app/colours.scss";
+
+.footer {
+  padding: 24px 0;
+
+  @media (min-width: 768px) {
+    padding-bottom: 40px;
+  }
+}
+
+.wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-top: 24px;
+  border-top: 1px solid $green;
+
+  @media (min-width: 768px) {
+    padding-top: 40px;
+    margin-bottom: 16px;
+  }
+}
+
+.button_wrap {
+  @media (min-width: 768px) {
+    width: 342px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.up_btn {
+  width: 32px;
+  height: 32px;
+  padding: 8px;
+  border: none;
+  background-color: $green;
+  border-radius: 100px;
+  transition: background-color 300ms linear;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $dark-green;
+
+    .up_icon {
+      stroke: $green;
+    }
+  }
+}
+
+.up_icon {
+  stroke: $dark-green;
+  transition: stroke 300ms linear;
+}
+
+.mob_icon_wrap {
+  display: flex;
+  width: 56px;
+  justify-content: space-between;
+  margin: 0 auto 24px;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.desk_icon_wrap {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: flex;
+    width: 56px;
+    justify-content: space-between;
+  }
+}
+
+.icon {
+  stroke: $dark-green;
+}
+
+.address {
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.content_wrap {
+  @media (min-width: 768px) {
+    width: 342px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.content {
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.64px;
+  text-align: center;
+  margin-bottom: 16px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+  }
+}
+
+

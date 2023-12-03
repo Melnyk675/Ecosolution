@@ -1,12 +1,79 @@
 @import "/app/colours.scss";
 
+.section {
+  padding-top: 36px;
+
+  @media (min-width: 768px) {
+    padding-top: 100px;
+  }
+
+  @media (min-width: 1280px) {
+    padding-top: 120px;
+  }
+}
+
+.container {
+  @media (min-width: 768px) {
+    display: flex;
+    gap: 24px;
+  }
+
+  @media (min-width: 1280px) {
+    gap: 48px;
+  }
+}
+
+.mob_title {
+  @media (min-width: 768px) {
+    display: none;
+  }
+
+  @media (min-width: 1280px) {
+    width: 374px;
+    margin: 0 auto;
+  }
+}
+
+.desk_title {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
+}
+
+
 .list {
     margin-bottom: 36px;
+
+    @media (min-width: 768px) {
+      width: 342px;
+      padding-top: 7px;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: 1280px) {
+      width: 546px;
+    }
+  
+    @media (min-width: 1440px) {
+      width: 596px;
+    }
   }
   
   .card {
     padding: 16px 0;
     border-top: 1px solid $green;
+
+  @media (min-width: 768px) {
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    padding: 24px 0;
+  }
   }
   
   .wrap {
@@ -14,9 +81,14 @@
     gap: 8px;
     align-items: center;
     margin-bottom: 16px;
+
+    @media (min-width: 1280px) {
+      font-size: 24px;
+      letter-spacing: -0.96px;
+    }
   }
   
-  .title {
+  .question_title {
     text-align: justify;
     font-size: 18px;
     font-weight: 400;
@@ -31,6 +103,11 @@
     line-height: normal;
     letter-spacing: -0.56px;
     margin-left: 24px;
+
+    @media (min-width: 1280px) {
+      font-size: 16px;
+      letter-spacing: -0.64px;
+    }
   }
   
   .contact_text {
@@ -40,42 +117,44 @@
     line-height: normal;
     letter-spacing: -0.72px;
     margin-bottom: 12px;
+
+    @media (min-width: 768px) {
+      text-align: left;
+    }
+
+    @media (min-width: 1280px) {
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 22px;
+    }
   }
   
   .contact_btn {
-    display: block;
     width: 130px;
-    height: 39px;
-    padding: 10px 16px;
     margin: 0 auto;
-    border-radius: 500px;
-    background-color: $green;
-    color: $text-color;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: -0.64px;
-    position: relative;
-    transition: 300ms linear;
-  
-    &::after {
-      content: "";
-      position: absolute;
-      top: 12px;
-      right: 16px;
-      width: 14px;
-      height: 14px;
-      background-color: $dark-green;
-      border-radius: 50%;
-      transition: background-color 300ms linear;
+    
+    @media (min-width: 768px) {
+      margin-left: 84px;
+    }
+
+    @media (min-width: 1280px) {
+      margin: 0 auto;
+    }
+  }
+
+  .title_wrap {
+    @media (min-width: 768px) {
+      width: 342px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    @media (min-width: 1280px) {
+      width: 546px;
     }
   
-    &:hover {
-      background-color: $dark-green;
-      color: $green;
-  
-      &::after {
-        background-color: $green;
-      }
+    @media (min-width: 1440px) {
+      width: 596px;
     }
   }

@@ -1,49 +1,42 @@
  "use client"; 
 
 import { useState, useEffect } from "react";
+import { useMedia } from "react-use";
 import { Wrapper } from "../Container/Wrapper/Wrapper";
-import LogoIcon from "@/public/icons/logo.svg";
+import { Logo } from "../Container/Logo/Logo";
 import Menu from "@/public/icons/menu.svg";
 import css from "./Header.module.scss";
 import { MenuMob } from "./MenuMob/MenuMob";
+import { Btn } from "../Container/Button/Button";
+import { scrollToTop, toggleScroll, onWindowScroll, onHeaderChange,
+} from "@/app/helpers/scroll";
 
 export const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [scroll, setScroll] = useState(false);
+    const tablet = useMedia("(min-width: 768px)", false);
   
     useEffect(() => {
-      const handleScroll = () => {
-        const scrollPosition = window.scrollY;
+      toggleScroll(isMenuOpen);
+    }, [isMenuOpen]);
   
-      if (scrollPosition > 100) {
-        setScroll(true);
-      } else {
-        setScroll(false);
-      }
-    };
-
-    if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', handleScroll);
-    }
-
-    return () => {
-      if (typeof window !== 'undefined') {
-        window.removeEventListener('scroll', handleScroll);
-      }
-    };
-  }, []); 
+    useEffect(() => {
+      onHeaderChange(setScroll);
+    }, []);
+  
+    useEffect(() => {
+      window.addEventListener("scroll", onWindowScroll);
+      return () => {
+        window.removeEventListener("scroll", onWindowScroll);
+      };
+    }, []);
   
     return (
       <>
         <header className={`${css.header} ${scroll && css.scrolled}`}>
           <Wrapper className={css.wrapper}>
-            <a href="/" className={css.logo}>
-              <LogoIcon width={31} height={18} />
-              <p className={css.logo_title}>ecosolution</p>
-              <p className={css.logo_text}>
-                <span className={css.logo_span}>GREEN</span>ERGY FOR LIFE
-              </p>
-            </a>
+          <Logo scrollToTop={scrollToTop} />
+          <div className={css.btn_wrap}>
             <button
               type="button"
               className={css.menu_btn}
@@ -51,6 +44,10 @@ export const Header = () => {
             >
               <Menu width={16} height={16} />
             </button>
+            {tablet && (
+              <Btn className={css.contact_btn}>Get in touch</Btn>
+            )}
+          </div>
           </Wrapper>
         </header>
         {isMenuOpen && <MenuMob setIsMenuOpen={setIsMenuOpen} />}

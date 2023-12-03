@@ -2,10 +2,21 @@
 
 .section {
   padding-top: 36px;
+
+  @media (min-width: 768px) {
+    padding: 100px 0;
+  }
 }
 
 .title {
   text-align: center;
+}
+
+.wrap {
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .list {

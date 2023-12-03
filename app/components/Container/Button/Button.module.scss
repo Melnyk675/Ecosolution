@@ -1,0 +1,40 @@
+@import "/app/colours.scss";
+
+.contact_btn {
+  display: block;
+  height: 39px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 500px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.64px;
+  text-align: left;
+  background-color: $green;
+  color: $dark-green;
+  position: relative;
+  transition: 300ms linear;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    width: 14px;
+    height: 14px;
+    background-color: $dark-green;
+    border-radius: 50%;
+    transition: background-color 300ms linear;
+  }
+
+  &:hover {
+    background-color: $dark-green;
+    color: $green;
+
+    &::after {
+      background-color: $green;
+    }
+  }
+}

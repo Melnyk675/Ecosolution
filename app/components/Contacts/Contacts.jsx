@@ -1,7 +1,7 @@
 import { Wrapper } from "../Container/Wrapper/Wrapper";
 import { Title } from "../Container/Title/Title";
-import { ContactForm } from "../Form/ContactForm";
-import Phone from "@/public/icons/call.svg";
+import { ContactForm } from "../Form/Form";
+import Call from "@/public/icons/call.svg";
 import Sms from "@/public/icons/sms.svg";
 import Map from "@/public/icons/map.svg";
 import Instagram from "@/public/icons/instagram.svg";
@@ -13,6 +13,7 @@ export const Contacts = () => {
     <section className={css.section} id="contacts">
       <Wrapper>
         <Title className={css.title}>Contact us</Title>
+        <div className={css.wrap}>
         <ul className={css.list}>
           <li className={css.contact_item}>
             <p className={css.contact_title}>Phone:</p>
@@ -22,11 +23,11 @@ export const Contacts = () => {
               className={css.link}
               style={{ marginBottom: "12px" }}
             >
-              <Phone width={24} height={24} className={css.icon} />
+              <Call width={24} height={24} className={css.icon} />
               <p className={css.content}>38 (098) 12 34 567</p>
             </a>
             <a href="tel:380931234567" target="_blank" className={css.link}>
-              <Phone width={24} height={24} className={css.icon} />
+              <Call width={24} height={24} className={css.icon} />
               <p className={css.content}>38 (093) 12 34 567</p>
             </a>
           </li>
@@ -75,6 +76,7 @@ export const Contacts = () => {
           </li>
         </ul>
         <ContactForm />
+        </div>
       </Wrapper>
     </section>
   );
