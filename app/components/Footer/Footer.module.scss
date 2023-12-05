@@ -45,7 +45,8 @@
   transition: background-color 300ms linear;
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $dark-green;
 
     .up_icon {

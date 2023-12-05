@@ -1,5 +1,5 @@
 import Close from "@/public/icons/close.svg";
-import ArrowUpright from "@/public/icons/arrow-upright.svg";
+import ArrowUpright from "@/public/icons/mob-arrow-upright.svg";
 import MobInstagram from "@/public/icons/mob-instagram.svg";
 import MobFacebook from "@/public/icons/mob-facebook.svg";
 import { scrollToSection } from "@/app/helpers/scroll";
@@ -52,13 +52,13 @@ export const MenuMob = ({ setIsMenuOpen }) => {
             target="_blank"
             className={css.link}
           >
-            <MobFacebook width={24} height={24} className={css.icon} />
+            <MobFacebook width={24} height={24} className={css.icon_fb} />
           </a>
           <a href="https://www.instagram.com/"
             target="_blank"
             className={css.link}
           >
-            <MobInstagram width={24} height={24} className={css.icon} />
+            <MobInstagram width={24} height={24} className={css.icon_inst} />
           </a>
         </div>
       </div>

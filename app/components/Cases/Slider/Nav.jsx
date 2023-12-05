@@ -4,7 +4,7 @@ import ArrowRight from "@/public/icons/arrow-right.svg";
 import { useSwiper } from "swiper/react";
 import css from "./Slider.module.scss";
 
-export default function SlideNextButton({ count, sliderRef  }) {
+export default function SlideNextButton({ count  }) {
   const swiper = useSwiper();
 
   return (

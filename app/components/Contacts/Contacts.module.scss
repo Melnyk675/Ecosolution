@@ -1,7 +1,7 @@
 @import "/app/colours.scss";
 
 .section {
-  padding-top: 36px;
+  padding-top: 36px 0;
 
   @media (min-width: 768px) {
     padding: 100px 0;

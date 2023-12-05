@@ -17,10 +17,7 @@ export const Contacts = () => {
         <ul className={css.list}>
           <li className={css.contact_item}>
             <p className={css.contact_title}>Phone:</p>
-            <a
-              href="tel:380981234567"
-              target="_blank"
-              className={css.link}
+            <a href="tel:380981234567" target="_blank" className={css.link}
               style={{ marginBottom: "12px" }}
             >
               <Call width={24} height={24} className={css.icon} />

@@ -98,8 +98,6 @@
 .item_text {
   color: rgba(255, 255, 255, 0.25);
   font-size: 24px;
-  font-weight: 400;
-  line-height: normal;
   letter-spacing: -0.96px;
   transition: color 300ms linear;
 }
@@ -119,11 +117,32 @@
   height: 24px;
 }
 
-.icon {
+.icon_fb {
   stroke: $white-text;
-  transition: stroke 300ms linear;
+  transition: 300ms linear;
 
-  &:hover {
+  path:first-child {
+    fill: $white-text;
+    transition: 300ms linear;
+  }
+
+  &:hover,
+  &:focus {
+    stroke: $green;
+  }
+
+  &:hover path:first-child,
+  &:focus path:first-child {
+    fill: $green;
+  }
+}
+
+.icon_inst {
+  stroke: $white-text;
+  transition: 300ms linear;
+
+  &:hover,
+  &:focus {
     stroke: $green;
   }
 }

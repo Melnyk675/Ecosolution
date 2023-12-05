@@ -55,7 +55,8 @@
   transition: border-color 300ms linear;
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     border-color: $green;
 
     .icon {

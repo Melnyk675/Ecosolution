@@ -30,22 +30,22 @@ export const Values = () => {
       <li className={css.img_wrap1}>
         <Image
           src="/images/workers1.jpg"
-          width={320}
-          height={200}
+          width={596}
+          height={340}
           alt="windmill"
-          sizes="(max-width: 768px) 100%, 320px"
           loading="lazy"
+          srcSet="/images/workers2.jpg 1x, /images/workers1.jpg 2x"
           style={{ objectFit: "cover", width: "100%", height: "100%" }}
         />
       </li>
       <li className={css.img_wrap2}>
         <Image
           src="/images/solar1.jpg"
-          width={342}
-          height={197}
+          width={596}
+          height={340}
           alt="windmill"
-          sizes="(max-width: 768px) 100%, 342px"
           loading="lazy"
+          srcSet="/images/solar2.jpg 1x, /images/solar1.jpg 2x"
           style={{ objectFit: "cover", width: "100%", height: "100%" }}
         />
       </li>

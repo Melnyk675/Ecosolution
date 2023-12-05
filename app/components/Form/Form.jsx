@@ -1,7 +1,7 @@
 "use client";
 
 import { Formik, Form, Field } from "formik";
-import validationSchema from "@/app/helpers/validation";
+import { validationSchema } from "@/app/helpers/validation";
 import ArrowRight from "@/public/icons/arrow-right.svg";
 import css from "./Form.module.scss";
 
@@ -9,8 +9,9 @@ export const ContactForm = () => (
   <Formik
     initialValues={{
       firstName: "",
-      lastName: "",
       email: "",
+      phone: "",
+      message: "",
     }}
     validationSchema={validationSchema}
     onSubmit={(values) => {
@@ -32,7 +33,7 @@ export const ContactForm = () => (
               borderBottom: `1px solid ${errors.name ? "#d28b8b" : "#97d28b"}`,
             }}
           />
-          {errors.name ? <p className={css.error_text}>{errors.name}</p> : null}
+          {errors.name && <p className={css.error_text}>{errors.name}</p>}
         </div>
 
         <div className={css.wrap}>
@@ -49,9 +50,7 @@ export const ContactForm = () => (
               borderBottom: `1px solid ${errors.email ? "#d28b8b" : "#97d28b"}`,
             }}
           />
-          {errors.email ? (
-            <p className={css.error_text}>{errors.email}</p>
-          ) : null}
+          {errors.email && <p className={css.error_text}>{errors.email}</p>}
         </div>
 
         <div className={css.wrap}>
@@ -67,9 +66,7 @@ export const ContactForm = () => (
               borderBottom: `1px solid ${errors.phone ? "#d28b8b" : "#97d28b"}`,
             }}
           />
-          {errors.phone ? (
-            <p className={css.error_text}>{errors.phone}</p>
-          ) : null}
+          {errors.phone && <p className={css.error_text}>{errors.phone}</p>}
         </div>
 
         <label htmlFor="message" className={css.label}>
@@ -86,7 +83,7 @@ export const ContactForm = () => (
         <button type="submit" className={css.button}>
           <p>Send</p>
           <div className={css.icon_wrap}>
-            <ArrowRight width={16} heght={16} className={css.icon} />
+            <ArrowRight width={16} height={16} className={css.icon} />
           </div>
         </button>
       </Form>

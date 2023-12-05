@@ -33,11 +33,11 @@ export const MainSection = () => {
         <div className={css.img_wrap}>
           <Image
             src="/images/turbine1.jpg"
-            width={320}
-            height={200}
+            width={1240}
+            height={524}
             alt="windmill"
-            sizes="(max-width: 768px) 100%, 320px"
             loading="lazy"
+            srcSet="/images/turbine2.jpg 1x, /images/turbine1.jpg 2x"
             style={{ objectFit: "cover", width: "100%", height: "100%" }}
           />
         </div>

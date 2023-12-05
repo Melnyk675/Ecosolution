@@ -1,33 +1,17 @@
-import Joi from 'joi';
+import * as Yup from "yup";
 
-const validationSchema = Joi.object({
-  name: Joi.string()
-    .pattern(/^[^\d]+$/, { name: "alpha", invert: true })
-    .required()
-    .messages({
-      "string.pattern.base": "Wrong Fullname",
-      "any.required": "Required",
-    }),
-  email: Joi.string()
-    .email({ tlds: { allow: false } })
-    .required()
-    .messages({
-      "string.email": "Wrong Email",
-      "any.required": "Required",
-    }),
-  phone: Joi.string()
-    .pattern(/^\d+$/)
-    .min(10)
-    .max(12)
-    .required()
-    .messages({
-      "string.pattern.base": "Wrong Phone",
-      "string.min": "Wrong Phone",
-      "string.max": "Wrong Phone",
-      "any.required": "Required",
-    }),
-  message: Joi.string(),
+export const validationSchema = Yup.object().shape({
+  name: Yup.string()
+    .matches(/^[^\d]+$/, "Wrong Fullname")
+    .required("Required"),
+  email: Yup.string()
+    .email("Wrong Email")
+    .matches(/\./, "Wrong Email")
+    .required("Required"),
+  phone: Yup.string()
+    .max(12, "Wrong Phone")
+    .min(10, "Wrong Phone")
+    .matches(/^\d+$/, "Wrong Phone")
+    .required("Required"),
+  message: Yup.string(),
 });
-
-export default validationSchema;
-
