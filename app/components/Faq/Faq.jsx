@@ -34,7 +34,7 @@ export const Faq = () => {
                     <Plus className={css.icon} />
                   )}
 
-                <h3 className={css.title}>{question.title}</h3>
+                <h3 className={css.question_title}>{question.title}</h3>
               </div>
               {activeIndex === index && (
                 <p className={css.text}>{question.text}</p>

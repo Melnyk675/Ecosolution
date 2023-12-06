@@ -37,10 +37,10 @@ export const Footer = () => {
         </div>
         <div className={css.mob_icon_wrap}>
           <a href="https://www.facebook.com/" target="_blank">
-            <Facebook2 width={24} height={24} className={css.icon} />
+            <Facebook2 width={24} height={24} className={css.icon_fb} />
           </a>
           <a href="https://www.instagram.com/" target="_blank">
-            <Instagram width={24} height={24} className={css.icon} />
+            <Instagram width={24} height={24} className={css.icon_inst} />
           </a>
         </div>
         <address className={css.address}>
